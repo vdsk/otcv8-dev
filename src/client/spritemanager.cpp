@@ -123,7 +123,7 @@ void SpriteManager::saveSpr64(std::string fileName)
 {
     if (!m_loaded)
         stdext::throw_exception("failed to save, spr is not loaded");
-    if (!m_spritesFile || m_spriteSize != 32)
+    if (m_spriteSize != 32)
         stdext::throw_exception("not allowed");
 
     try {
